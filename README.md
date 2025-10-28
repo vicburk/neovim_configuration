@@ -16,7 +16,7 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 ```
 Clone this repository to the .config file.
 ```{bash}
-git clone https://github.com/vicburk/neovim_configuration.git
+git clone https://github.com/vicburk/neovim_configuration.git ~/.config/nvim
 ```
 Now you should be able to start Neovim, and everything should load automatically.
 ```{bash}
