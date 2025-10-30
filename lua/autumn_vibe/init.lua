@@ -11,13 +11,14 @@ local colors = {
   green = "#2A6C16",
   highlight = "#FFFBC3",
   visual = "#D1ED8D",
-  cursor = "#FAFF5D",
+  cursor = "#FFF58A",
   classicmagenta = "#FF00E1",
   classicgreen = "#71A626",
   classicorange = "#FF9D00",
   classicblue = "#000DFF",
   classicviolet = "#BF00FF",
   classiccyan = "#00FFFF",
+  floatbg = "#FFE291",
 }
 
 function M.colorscheme()
@@ -36,10 +37,11 @@ function M.colorscheme()
   set(0, "Constant", { fg = colors.purple })
   set(0, "Comment", { fg = colors.indigo })
   set(0, "Special", { fg = colors.green })
-  set(0, "Cursor", { background = colors.cursor })
+  set(0, "Cursor", { fg = colors.fg, bg = colors.cursor })
   set(0, "LineNr", { fg = colors.red })
   set(0, "CursorLineNr", { fg = colors.brightred, bold = true })
   set(0, "Menu", { fg = colors.fg, bg = colors.bg })
+  set(0, "TermCursor", { fg = colors.fg, bg = colors.cursor })
 
   -- Popup Menu
   set(0, "Pmenu", { fg = colors.fg, bg = colors.bg })
@@ -47,12 +49,13 @@ function M.colorscheme()
   set(0, "PmenuBorder", { fg = colors.purple })
 
   -- Float
-  set(0, "NormalFloat", { fg = colors.fg, bg = colors.highlight })
+  set(0, "NormalFloat", { fg = colors.fg, bg = colors.floatbg })
   set(0, "FloatBorder", { fg = colors.purple })
 
   -- Search
-  set(0, "IncSearch", { fg = colors.fg, bg = colors.highlight })
-  set(0, "CurSearch", { fg = colors.fg, bg = colors.highlight })
+  set(0, "Search", { fg = colors.fg, bg = colors.visual })
+  set(0, "IncSearch", { fg = colors.fg, bg = colors.visual })
+  set(0, "CurSearch", { fg = colors.fg, bg = colors.visual })
 
   -- RainbowDelimiter
   set(0, "RainbowDelimiterRed", { fg = colors.brightred })
