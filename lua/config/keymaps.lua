@@ -18,7 +18,7 @@ map("n", "<leader>t", function()
 end, { desc = "Open Terminal" })
 
 -- Optional: Exit terminal mode with ESC
-vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+vim.keymap.set("t", "<Esc>", "<C-j><C-k>", { desc = "Exit terminal mode" })
 
 -- Optional: Easy navigation between windows from terminal mode
 vim.keymap.set("t", "<C-h>", "<C-\\><C-n><C-w>h", { desc = "Move to left window" })

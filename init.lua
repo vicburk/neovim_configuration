@@ -2,3 +2,5 @@
 require("config.lazy")
 
 vim.opt.swapfile = false
+
+require("autumn_vibe.init").colorscheme()
