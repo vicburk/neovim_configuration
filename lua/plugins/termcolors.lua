@@ -1,31 +1,42 @@
 -- Install termcolors
-
+-- ~/.config/nvim/lua/plugins/termcolors.lua
 return {
   {
     "psliwka/termcolors.nvim",
+    lazy = false,
+    priority = 1000,
     config = function()
+      local termcolors = require("termcolors")
       local colorspace = require("utils.colorspace")
       local depth = colorspace.detect()
-      local termcolors = require("termcolors")
 
       if depth <= 16 then
-        -- Create an 8-color fallback palette that resembles your main scheme
         termcolors.setup({
           palette = {
-            black = "#000000",
-            red = "#aa0000",
-            green = "#00aa00",
-            yellow = "#aa5500",
-            blue = "#0000aa",
-            magenta = "#aa00aa",
-            cyan = "#00aaaa",
-            white = "#aaaaaa",
+            black = "#2A1C00", -- dark brown instead of true black
+            red = "#72120B", -- your dark red
+            green = "#2A6C16", -- your forest green
+            yellow = "#E05707", -- warm orange as yellow
+            blue = "#380185", -- deep indigo
+            magenta = "#7B0086", -- purple accent
+            cyan = "#00A09A", -- soft cyan variant
+            white = "#FBE5AB", -- your beige background as “white”
           },
+          background = "#FBE5AB",
+          foreground = "#693801",
         })
-        vim.notify("Using 8-color fallback palette", vim.log.levels.INFO)
+        vim.cmd([[
+          colorscheme default
+          hi Normal guibg=#FBE5AB guifg=#693801
+          hi CursorLine guibg=#FFFBC3
+          hi Visual guibg=#D1ED8D
+          hi Comment guifg=#380185
+          hi Statement guifg=#72120B
+        ]])
+        vim.notify("Using 8-color fallback palette (Colab mode)", vim.log.levels.INFO)
       else
-        -- Use normal colors (your theme)
-        vim.notify("Using full 256-color or truecolor theme", vim.log.levels.INFO)
+        -- Use your full theme normally
+        require("autumn_vibe").colorscheme()
       end
     end,
   },
