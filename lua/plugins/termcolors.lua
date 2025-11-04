@@ -13,13 +13,13 @@ return {
         termcolors.setup({
           palette = {
             black = "#000000",
-            red = "#ff5555",
-            green = "#50fa7b",
-            yellow = "#f1fa8c",
-            blue = "#6272a4",
-            magenta = "#ff79c6",
-            cyan = "#8be9fd",
-            white = "#bbbbbb",
+            red = "#aa0000",
+            green = "#00aa00",
+            yellow = "#aa5500",
+            blue = "#0000aa",
+            magenta = "#aa00aa",
+            cyan = "#00aaaa",
+            white = "#aaaaaa",
           },
         })
         vim.notify("Using 8-color fallback palette", vim.log.levels.INFO)
