@@ -34,7 +34,6 @@
   "snacks.nvim": { "branch": "main", "commit": "41712e3026a6d690e3c65f83b335cb34e054d2cd" },
   "sqlite.lua": { "branch": "master", "commit": "50092d60feb242602d7578398c6eb53b4a8ffe7b" },
   "swenv.nvim": { "branch": "main", "commit": "4157de2619ec2e5c61c103fb6517845a0e04e558" },
-  "termcolors.nvim": { "branch": "master", "commit": "2216b7ad7f4781c7d5160f213f4c99f8e0381f12" },
   "todo-comments.nvim": { "branch": "main", "commit": "411503d3bedeff88484de572f2509c248e499b38" },
   "tokyonight.nvim": { "branch": "main", "commit": "b13cfc1286d2aa8bda6ce137b79e857d5a3d5739" },
   "trouble.nvim": { "branch": "main", "commit": "bd67efe408d4816e25e8491cc5ad4088e708a69a" },
